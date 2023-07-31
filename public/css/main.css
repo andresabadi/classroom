@@ -1,0 +1,993 @@
+/* TIPOGRAFÍAS */
+
+@import url("https://fonts.cdnfonts.com/css/montserrat");
+
+* {
+    font-family: Montserrat, sans-serif;
+    
+}
+
+/* GENERAL */
+
+:root {
+  --color-base: #012061;
+--color-fondo: #F1F7FB;
+--color2: rgb(67,153,217);
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+.mainContainerContent{
+    padding: 0;
+    margin-top: 5em;
+}
+
+h1 {
+  color: var(--color-base);
+  font-weight: 900;
+  font-size: 32px;
+}
+
+h2 {
+  color: var(--color-base);
+  font-weight: 800;
+}
+
+input, textarea {
+  border-radius: 1em;
+  border: 1px solid var(--color-base);
+  padding: .5em 1em;
+  color: var(--color2);
+}
+
+a {
+  color: var(--color2);
+}
+
+a:hover {
+  color: var(--color-base);
+}
+
+button {
+  padding: .5em 1em;
+  border-radius: 1em;
+  border: 2px solid var(--color-base);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.botonAzul {
+  background-color: var(--color-base);
+  color: white;
+}
+
+.botonBlanco {
+  background-color: white;
+  color: var(--color-base);
+}
+
+.card a, .curso a {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.azul {
+  color: var(--color2);
+}
+
+
+.card2 {
+  margin-bottom: 2em;
+  box-shadow: .3em .3em .5em rgba(0,0,0,0.5);
+}
+
+.iconos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-base);
+  font-size: 1.5em;
+}
+
+.iconos > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.iconos > div > a {
+  margin-bottom: 0;
+  margin-top: 6px;
+}
+
+.iconos img {
+  height: 1em;
+  aspect-ratio: 1;
+}
+
+.iconos span {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.paddingContainer {
+  padding: 3em 6em;
+  background-color: var(--color-fondo);
+}
+
+.ver {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: flex !important;
+}
+
+.eliminar {
+  border: none;
+  background: none;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  color: red;
+  cursor: pointer;
+}
+
+br {
+  margin: .5em 0;
+}
+
+/* HEADER */
+
+.headerContainer{
+    width: 100vw;
+    height: 2em;
+    background-color: var(--color-base);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    z-index: 2;
+    top: 0;
+}
+
+.headerContainer *{
+    text-decoration: none;
+    color: white;
+    margin: 0 24px;
+    font-weight: bold;
+    
+}
+
+.headerContainer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.headerContainer .logo {
+  width: 6em;
+}
+
+.derecha .signInButton {
+  background-color: white;
+  color: var(--color-base);
+}
+
+.user:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.user-panel {
+  box-sizing: border-box;
+  z-index: 3;
+  background-color: var(--color-base);
+  position: absolute;
+  top: 5em;
+  right: 3em;
+  padding: 0;
+  font-size: 14px;
+  padding: 1em;
+  border: 1px solid lightgray;
+  box-shadow: .3em .3em .5em rgba(0,0,0,0.5);
+}
+
+.user-panel a {
+  margin-bottom: 1em;
+  display: block;
+}
+
+#logout-form {
+  display: inline;
+}
+
+.logout {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.fa-bars {
+  display: none !important;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--color-base);
+    padding: 1em 5em;
+    color: white;
+    z-index: 2;
+    display: flex;
+    font-size: 14px;
+    gap: 4em;
+    justify-content: space-between;
+    margin-top: -8px;
+    position: relative;
+  }
+
+  .footer a {
+    color: white;
+  }
+
+  .footerDcha {
+    text-align: right;
+    margin-top: 2em;
+  }
+
+  .footer .logo {
+    margin: 3em 0;
+    width: 15em;
+  }
+
+  /* LANDING PAGE */
+
+  .landingContainer {
+    display: flex;
+    position: relative;
+  }
+  
+  .landingContainer > img {
+    width: 100vw;
+    top: 5em;
+  }
+
+  .landingContainer > img, .sidebar {
+    flex: 1;
+  }
+
+  .sidebar {
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    bottom: 0;
+    height: auto;
+    padding: 8em;
+  }
+
+  .sidebar button {
+    width: 100%;
+    padding: .5em auto;
+    margin-bottom: .6em;
+  }
+
+  /* LOGIN */
+
+  .loginContainer {
+    display: flex;
+    padding: 10em;
+  }
+
+  .loginContainer > form {
+    text-align: center;
+  }
+
+  .loginContainer > * {
+    width: 50%;
+  }
+
+  /* HOME */
+
+  #search {
+    /* width: 100vw; */
+    background-color: var(--color-base);
+    color: white;
+    text-align: center;
+    padding: 5em;
+  }
+
+  #search input {
+    width: 40%;
+  }
+
+  #search .fa-magnifying-glass {
+    margin-left: -2em;
+    color: black;
+  }
+
+  .compContainer {
+    padding: 2em 6em;
+    background-color: var(--color-fondo);
+  }
+
+  .competencias {
+    padding: 1em 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 1em 0;
+  }
+
+  /* CARDS */
+
+  .card {
+    border: 1px solid lightgray;
+  }
+
+  .card > a img {
+    width: 100%;
+  }
+
+  .card > div {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* PÁGINA DE CURSOS */
+
+  .contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+
+  .curso > div {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .curso .titulo {
+    background-color: var(--color-base);
+    color: white;
+  }
+
+  .curso .titulo > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .curso .titulo i {
+    font-size: 24px;
+  }
+
+  .curso .crear {
+    margin-bottom: 0;
+    margin-top: 3em;
+  }
+
+  .descripcion {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+  }
+
+  .descripcion a {
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-bottom: 1em;
+  }
+
+  .progreso {
+    border: 2px solid var(--color-base);
+  }
+
+  .recursos {
+    padding: 1em 0;
+  }
+
+  .recursos > div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+  }
+
+  .recursos > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+   .recursos .fa-person-chalkboard, .recursos .fa-video, .recursos img {
+    height: 5rem;
+    font-size: 5em;
+    color: var(--color-base);
+    padding: 1em;
+  }
+
+  .accesoRapido {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2em;
+  }
+
+  .accesoRapido > div {
+    width: 25%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accesoRapido div {
+    text-align: center;
+  }
+
+  .accesoRapido img {
+    width: 100%;
+  }
+
+  .programa {
+    width: 100%;
+  }
+
+  /* PÁGINA DE LECCIONES */
+
+  .lecciones {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .leccion {
+    display: flex;
+  }
+
+  .leccion > div {
+    padding: 2em;
+  }
+
+  .leccion .titulo {
+    background-color: var(--color-base);
+    color: white;
+    width: 30%;
+  }
+
+  .botones {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .editar {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+
+  .editar a, .editar form {
+    margin: 1em 0;
+  }
+
+  .checkmark {
+    text-align: right;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin-bottom: 1em;
+  }
+
+  .checkmark span {
+    padding: 2px;
+  }
+
+  .checkmark i {
+    font-size: 24px;
+    color: var(--color-base);
+  }
+
+  /* NOSOTROS */
+
+  .personas {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .personas > div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .datos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+  }
+
+  .imagen {
+    width: 100%;
+    background-color: var(--color-base);
+  }
+
+  .datos img {
+    height: 15em;
+    border-radius: 50%;
+    margin: -1em 0;
+  }
+
+  .datos > h3 {
+    padding-top: 1em;
+    margin-bottom: 0;
+  }
+
+  .datos > div {
+    text-align: center;
+  }
+  
+  .social {   
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .sobre-inco {
+    margin-top: 4em;
+  }
+
+  .enlaces {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    gap: 3em;
+  }
+
+  .enlaces > div {
+    width:50%;
+  }
+
+  .enlaces img {
+    width: 100%;
+  }
+
+  /* FAQ */
+
+  .faq {
+    border-bottom: 1px solid lightgray;
+  }
+
+  .nuevofaq {
+    display: flex;
+    justify-content: center;
+  }
+
+  .faq > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq .botones {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  /* NUEVA COMPETENCIA / CURSO */
+
+  .plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+  }
+
+  .plus-icon {
+    border-radius: 50%;
+    background-color: lightgray;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center !important;
+    justify-self: center !important;
+    text-decoration: none;
+    color: black;
+    margin-top: 1em;
+  }
+
+  .plus .plus-icon {
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    margin-top: 0;
+  }
+
+  .plus .fa-plus {
+    font-size: 60px;
+  }
+
+  .plus-link {
+    text-decoration: none;
+    align-self: center !important;
+    justify-self: center !important;
+  }
+
+  /* AÑADIR COMPETENCIA, CURSO O MÓDULO */
+
+  .competenciaForm, .cursoForm, .moduloForm {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px; 
+    padding: 5em;
+    text-align: center;
+    border: 1px solid var(--color2);
+    border-radius: .5em;
+}
+  
+.competenciaForm label, .cursoForm label, .moduloForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-base);
+    /* font-weight: bold; */
+  }
+  
+  .competenciaForm input[type="text"],
+  .competenciaForm textarea, 
+  .cursoForm input[type="text"],
+  .cursoForm textarea, 
+  .moduloForm input[type="text"],
+  .moduloForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-base);
+  }
+  
+  .competenciaForm textarea,
+  .cursoForm textarea,
+  .moduloForm textarea {
+    resize: vertical;
+  }
+  
+  .competenciaForm button[type="submit"],
+  .cursoForm button[type="submit"],
+  .moduloForm button[type="submit"] {
+    background-color: var(--color-base);
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  .competenciaForm button[type="submit"]:hover,
+  .cursoForm button[type="submit"]:hover,
+  .moduloForm button[type="submit"]:hover
+   {
+    background-color: #143A7E;
+  }
+
+  /* PÁGINA RECURSOS */
+
+  .recurso {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    background-color: white;
+  }
+
+  .recurso img {
+    width: 100%;
+  }
+
+  .recurso > div {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* ADMIN PANEL */
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8em;
+    padding: 2em;
+  }
+
+  .adminCard {
+    border-radius: 1.5em;
+    box-shadow: .2em .2em .3em rgba(0,0,0,0.5);
+    background-color: white;
+    text-align: center;
+    padding: 2em;
+  }
+
+  .adminCard i {
+    color: var(--color-base);
+    font-size: 10em;
+  }
+
+  .adminCard h3 {
+    margin-bottom: 0;
+  }
+
+  .adminCard a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* PERFIL Y CAMBIAR CONTRASEÑA */
+  .perfilForm, .passwordForm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+
+  .perfilForm > div, .passwordForm > div {
+    margin: .5em auto;
+  }
+
+  /* Estilos generales que aplican a todos los dispositivos */
+
+/* Tablet (2 tarjetas) */
+@media screen and (max-width: 1024px) {
+  /* Ajustar el ancho de las tarjetas */
+  .grid, .grid2, .contents {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Eliminar el relleno superior */
+  /* .mainContainerContent {
+    margin-top: 2em;
+  } */
+
+  /* Ajustar el ancho de los elementos del formulario */
+  .competenciaForm input[type="text"],
+  .competenciaForm textarea,
+  .cursoForm input[type="text"],
+  .cursoForm textarea, 
+  .moduloForm input[type="text"],
+  .moduloForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-base);
+  }
+
+  /* Ajustar el ancho del botón de envío en el formulario */
+  .competenciaForm button[type="submit"],
+  .cursoForm button[type="submit"],
+  .moduloForm button[type="submit"]
+   {
+    width: 100%;
+  }
+
+  /* Ajustar el ancho de la barra de búsqueda */
+  #search input {
+    width: 55%;
+  }
+
+  /* Ajustar el sidebar */
+  .sidebar {
+    padding: 6em;
+    width: 40%;
+  }
+}
+
+/* Mobile (1 sola tarjeta) */
+@media screen and (max-width: 768px) {
+
+  /* Cambiar distribución de elementos */
+    .footer, .personas > div, .recursos > div, .enlaces, .leccion, .accesoRapido {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .recursos > div {
+      gap: 5em;
+    }
+
+    .loginContainer {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .footer, .footerDcha {
+      text-align: center;
+    }
+
+    .sidebar {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5em;
+    }
+
+    .landingContainer > img {
+      width: auto;
+      height: 120vh;
+      top: 5em;
+    }
+
+  /* Cambiar padding del contenedor */
+
+  .paddingContainer {
+    padding: 2em 3em;
+  }
+
+  .compContainer {
+    padding: 1em 3em;
+  }
+
+  .loginContainer {
+    padding: 3em;
+  }
+
+   /* Mostrar una sola tarjeta en cada fila del grid */
+   .grid, .grid2, .contents {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajustar el ancho de los elementos del formulario */
+  .competenciaForm input[type="text"],
+  .competenciaForm textarea,
+  .cursoForm input[type="text"],
+  .cursoForm textarea, 
+  .moduloForm input[type="text"],
+  .moduloForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-base);
+  }
+
+  /* Ajustar el ancho del botón de envío en el formulario */
+  .competenciaForm button[type="submit"],
+  .cursoForm button[type="submit"],
+  .moduloForm button[type="submit"] {
+    width: 100%;
+  }
+
+  /* Ajustar el ancho de la barra de búsqueda */
+  #search input {
+    width: 70%;
+  }
+
+  /* Ajustar el ancho del logo en el header */
+  /* .headerContainer .logo {
+    width: 4em;
+  } */
+
+  /* Ajustar el tamaño del ícono del botón plus en la página de agregar competencia */
+  /* .plus .plus-icon {
+    width: 120px;
+    height: 120px;
+    padding: 6px;
+  } */
+
+  /* Ajustar el tamaño del ícono plus en la página de agregar competencia */
+  /* .plus .fa-plus {
+    font-size: 40px;
+  } */
+
+  /* Ajustar el tamaño de las imágenes en la página de recursos */
+  .recurso img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ajustar el tamaño de los elementos del login */
+  .loginContainer img, .loginContainer form {
+    width: 100%;
+  }
+
+  /* Ajustar el tamaño de las imágenes en la página de acceso rápido */
+   .accesoRapido > div {
+    width: 70%;
+  }
+
+  /* Ajustar el tamaño de las imágenes en la página de cursos */
+  /* .curso > div img {
+    width: 100%;
+    height: auto;
+  } */
+
+  /* Ajustar el tamaño de las imágenes de la web sobre INCO */
+  .enlaces > div {
+    width: 100%;
+  }
+
+  /* Ajustar el ancho de las columnas en el footer para la vista móvil */
+/* .footer {
+  grid-template-columns: 1fr;
+} */
+
+/* Ajustar el tamaño del logo en el header para la vista móvil */
+.headerContainer .logo {
+  /* width: 12em; */
+  margin: 0 auto;
+}
+
+/* Ajustar el tamaño del logo en el footer para la vista móvil */
+.footer .logo {
+  /* width: 12em; */
+  margin: 0 auto;
+}
+
+/* Ajustar el ancho de los títulos de los módulos */
+
+.leccion .titulo {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hamburguesa */
+
+.fa-bars {
+  display: inline-block !important;
+  font-size: 24px;
+  margin: 0 2em;
+}
+
+/* Menú principal */
+
+.menu {
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 3;
+  background-color: var(--color-base);
+  position: absolute;
+  top: 5em;
+  right: 3em;
+  padding: 0;
+  font-size: 14px;
+  padding: 1em;
+  border: 1px solid lightgray;
+  box-shadow: .3em .3em .5em rgba(0,0,0,0.5);
+  
+}
+
+.menu a, .menu span {
+  margin: .5em;
+}
+
+}
